@@ -1,0 +1,14 @@
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\obj\Debug\Huge.Prerender.WebApi.csprojResolveAssemblyReference.cache
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\Huge.Prerender.WebApi.dll.config
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\Huge.Prerender.WebApi.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\Huge.Prerender.WebApi.pdb
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\Newtonsoft.Json.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\System.Net.Http.Formatting.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\System.Web.Http.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\System.Web.Http.WebHost.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\Newtonsoft.Json.xml
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\System.Net.Http.Formatting.xml
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\System.Web.Http.xml
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\bin\System.Web.Http.WebHost.xml
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\obj\Debug\Huge.Prerender.WebApi.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.WebApi\obj\Debug\Huge.Prerender.WebApi.pdb

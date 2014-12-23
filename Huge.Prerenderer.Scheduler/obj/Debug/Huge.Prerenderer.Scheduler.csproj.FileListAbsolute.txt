@@ -1,0 +1,15 @@
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Huge.Prerenderer.Scheduler.dll
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Huge.Prerenderer.Scheduler.pdb
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Common.Logging.dll
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Huge.Prerender.Models.dll
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Quartz.dll
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\RestSharp.dll
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Huge.Prerender.Models.pdb
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Common.Logging.pdb
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Common.Logging.xml
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Quartz.pdb
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\Quartz.xml
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\bin\Debug\RestSharp.xml
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\obj\Debug\Huge.Prerenderer.Scheduler.csprojResolveAssemblyReference.cache
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\obj\Debug\Huge.Prerenderer.Scheduler.dll
+C:\Playground\Huge.Prerender\Huge.Prerenderer.Scheduler\obj\Debug\Huge.Prerenderer.Scheduler.pdb
