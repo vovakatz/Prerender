@@ -38,10 +38,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Common.Logging.2.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.3.0.18, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Quartz.2.3\lib\net40\Quartz.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -86,7 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -94,12 +104,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="JobManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuartzScheduler.cs" />
+    <Compile Include="SchedulerSettingsSection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="packages.config" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -116,9 +132,9 @@
       <Project>{d1cf8b90-7ffa-465e-91aa-f0e01a740090}</Project>
       <Name>Huge.Prerender.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Huge.Prerenderer.Scheduler\Huge.Prerenderer.Scheduler.csproj">
-      <Project>{8f8c7467-a9f4-4446-9b51-9bacab992ef1}</Project>
-      <Name>Huge.Prerenderer.Scheduler</Name>
+    <ProjectReference Include="..\Huge.Prerender.Scheduler\Huge.Prerender.Scheduler.csproj">
+      <Project>{4d816d5e-7cf3-4254-a25c-116ad78fda78}</Project>
+      <Name>Huge.Prerender.Scheduler</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

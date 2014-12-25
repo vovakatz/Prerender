@@ -1,9 +1,4 @@
 ﻿using Huge.Prerender.Models.Scheduler;
-using Huge.Prerenderer.Scheduler;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Huge.Prerender.Web.Controllers
@@ -14,13 +9,17 @@ namespace Huge.Prerender.Web.Controllers
         {
             JobManager jobManager = new JobManager();
 
-            JobDetail jobDetail = new JobDetail();
+            JobData jobData = new JobData();
 
-            jobDetail.CronExpression = "0/5 * * * * ?";
-            jobDetail.Description = "test";
-            jobDetail.Name = "test";
+            jobData.CronExpression = "0/5 * * * * ?";
+            jobData.Description = "test";
+            jobData.Name = "test";
 
-            jobManager.CreateJob(jobDetail);
+            jobManager.CreateJob(jobData);
+
+            return View();
+
+            //SchedulerConfigurationSection config = (SchedulerConfigurationSection)ConfigurationManager.GetSection("schedulerSection");
 
             return View();
         }

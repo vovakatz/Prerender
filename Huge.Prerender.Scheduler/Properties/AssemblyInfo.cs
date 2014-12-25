@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Huge.Prerenderer.Scheduler")]
+[assembly: AssemblyTitle("Huge.Prerender.Scheduler")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Huge.Prerenderer.Scheduler")]
+[assembly: AssemblyProduct("Huge.Prerender.Scheduler")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1f202027-45dd-48cf-8543-cb4a86e870a4")]
+[assembly: Guid("929d19c5-71ba-4f0a-86ba-5aaf00200602")]
 
 // Version information for an assembly consists of the following four values:
 //

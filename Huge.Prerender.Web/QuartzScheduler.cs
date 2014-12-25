@@ -1,7 +1,7 @@
 ﻿using Quartz;
 using System.Collections.Specialized;
 
-namespace Huge.Prerenderer.Scheduler
+namespace Huge.Prerender.Web
 {
     public sealed class QuartzScheduler
     {

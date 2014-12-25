@@ -2,12 +2,14 @@
 using System;
 using System.IO;
 
-namespace Huge.Prerenderer.Scheduler.Jobs
+namespace Huge.Prerender.Scheduler.Jobs
 {
     public class PrerenderJob : IJob
     {
         public void Execute(IJobExecutionContext context)
         {
+            //call end point
+
             string path = @"c:\temp\" + DateTime.Now.Ticks + ".txt";
             using (StreamWriter sw = File.CreateText(path))
             {

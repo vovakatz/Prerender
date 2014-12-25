@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Data", "Huge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Core", "Huge.Prerender.Business\Huge.Prerender.Core.csproj", "{87EDC5D4-80AD-47EA-A402-9B75B7D988A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerenderer.Scheduler", "Huge.Prerenderer.Scheduler\Huge.Prerenderer.Scheduler.csproj", "{8F8C7467-A9F4-4446-9B51-9BACAB992EF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Scheduler", "Huge.Prerender.Scheduler\Huge.Prerender.Scheduler.csproj", "{4D816D5E-7CF3-4254-A25C-116AD78FDA78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{87EDC5D4-80AD-47EA-A402-9B75B7D988A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87EDC5D4-80AD-47EA-A402-9B75B7D988A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87EDC5D4-80AD-47EA-A402-9B75B7D988A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F8C7467-A9F4-4446-9B51-9BACAB992EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F8C7467-A9F4-4446-9B51-9BACAB992EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F8C7467-A9F4-4446-9B51-9BACAB992EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F8C7467-A9F4-4446-9B51-9BACAB992EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D816D5E-7CF3-4254-A25C-116AD78FDA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D816D5E-7CF3-4254-A25C-116AD78FDA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D816D5E-7CF3-4254-A25C-116AD78FDA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D816D5E-7CF3-4254-A25C-116AD78FDA78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

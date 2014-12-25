@@ -3,3 +3,7 @@ C:\Playground\Huge.Prerender\Huge.Prerender.Data\bin\Debug\Huge.Prerender.Data.p
 C:\Playground\Huge.Prerender\Huge.Prerender.Data\obj\Debug\Huge.Prerender.Data.csprojResolveAssemblyReference.cache
 C:\Playground\Huge.Prerender\Huge.Prerender.Data\obj\Debug\Huge.Prerender.Data.dll
 C:\Playground\Huge.Prerender\Huge.Prerender.Data\obj\Debug\Huge.Prerender.Data.pdb
+C:\Playground\Huge.Prerender\Huge.Prerender.Data\bin\Debug\MongoDB.Bson.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.Data\bin\Debug\MongoDB.Driver.dll
+C:\Playground\Huge.Prerender\Huge.Prerender.Data\bin\Debug\MongoDB.Bson.xml
+C:\Playground\Huge.Prerender\Huge.Prerender.Data\bin\Debug\MongoDB.Driver.xml
