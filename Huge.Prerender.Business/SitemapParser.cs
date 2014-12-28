@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Huge.Prerender.Business
+namespace Huge.Prerender.Core
 {
     public class SitemapParser
     {
@@ -12,7 +12,7 @@ namespace Huge.Prerender.Business
             _sitemapUrl = sitemapUrl;
         }
 
-        public List<string> GetPageUrls()
+        public string [] GetPageUrls()
         {
             List<string> result = new List<string>();
 
@@ -27,7 +27,7 @@ namespace Huge.Prerender.Business
                 result.Add(locElement.Value);
             }
 
-            return result;
+            return result.ToArray();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Huge.Prerender.Scheduler
 
         protected override void OnStart(string[] args)
         {
-            System.Diagnostics.Debugger.Launch();
+            //System.Diagnostics.Debugger.Launch();
             //read configuration
             SchedulerConfigurationSection config = (SchedulerConfigurationSection)ConfigurationManager.GetSection("schedulerSection");
             
@@ -23,6 +23,8 @@ namespace Huge.Prerender.Scheduler
                 JobData jobData = new JobData();
                 jobData.ServiceEndPointUrl = config.SchedulerSettings[i].ServiceEndPointUrl;
                 jobData.sitemapUrl = config.SchedulerSettings[i].SitemapUrl;
+                jobData.Key = config.SchedulerSettings[i].WebsiteKey;
+                jobData.StorageType = config.SchedulerSettings[i].StorageType;
 
                 JobManager manager = new JobManager();
                 manager.CreateJob(config.SchedulerSettings[i], jobData);

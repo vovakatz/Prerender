@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using Huge.Prerender.Models;
+using System.Configuration;
 
 namespace Huge.Prerender.Scheduler
 {
@@ -20,16 +21,16 @@ namespace Huge.Prerender.Scheduler
 
     public class SchedulerSettingElements : ConfigurationElement
     {
-        [ConfigurationProperty("key", IsRequired = true)]
-        public string Key
+        [ConfigurationProperty("websiteKey", IsRequired = true, IsKey = true)]
+        public string WebsiteKey
         {
             get
             {
-                return (string)this["key"];
+                return (string)this["websiteKey"];
             }
             set
             {
-                this["key"] = value;
+                this["websiteKey"] = value;
             }
         }
 
@@ -71,6 +72,20 @@ namespace Huge.Prerender.Scheduler
                 this["sitemapUrl"] = value;
             }
         }
+
+        [ConfigurationProperty("storageType")]
+        public Enums.StorageType StorageType
+        {
+            get
+            {
+                return (Enums.StorageType)this["storageType"];
+            }
+            set
+            {
+                this["storageType"] = value;
+            }
+        }
+
     }
 
     public class SchedulerSettingCollection : ConfigurationElementCollection

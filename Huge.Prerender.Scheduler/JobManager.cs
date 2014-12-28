@@ -9,7 +9,7 @@ namespace Huge.Prerender.Scheduler
         public void CreateJob(SchedulerSettingElements config, JobData jobData)
         {
             IJobDetail job = JobBuilder.Create<PrerenderJob>()
-                .WithIdentity(config.Key)
+                .WithIdentity(config.WebsiteKey)
                 .StoreDurably(true).Build();
             job.JobDataMap.Put("info", jobData);
             ITrigger trigger = TriggerBuilder.Create().WithCronSchedule(config.CronExpression).Build();

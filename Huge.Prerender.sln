@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.WebApi", "Huge.Prerender.WebApi\Huge.Prerender.WebApi.csproj", "{F9540A8D-7EA1-4F65-9CAE-1650BD0D2603}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Service", "Huge.Prerender.Service\Huge.Prerender.Service.csproj", "{F9540A8D-7EA1-4F65-9CAE-1650BD0D2603}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Web", "Huge.Prerender.Web\Huge.Prerender.Web.csproj", "{9D41BF0C-7A3E-4DAD-88AA-0A32E9A34C4A}"
 EndProject
