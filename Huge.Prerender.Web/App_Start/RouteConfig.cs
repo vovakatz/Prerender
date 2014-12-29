@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Huge.Prerender.Web
+namespace Huge.Prerender.WebAdmin
 {
     public class RouteConfig
     {

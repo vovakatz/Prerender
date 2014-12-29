@@ -18,7 +18,11 @@ namespace Huge.Prerender.Scheduler.Jobs
             //System.Diagnostics.Debugger.Launch();
             request.AddBody(jobData);
 
-            var response = client.Execute(request);
+            client.ExecuteAsync(request, response =>
+            {
+                //log the completion of the task
+                //Console.WriteLine(response.Content);
+            });
 
 
             string path = @"c:\temp\" + DateTime.Now.Ticks + ".txt";

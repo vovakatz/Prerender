@@ -8,26 +8,32 @@ namespace Huge.Prerender.Service.Controllers
     {
         public void Post([FromBody]JobData jobData)
         {
-            IDataService persister;
-            switch (jobData.StorageType)
-            {
-                case Models.Enums.StorageType.File:
-                    persister = new FileDataService();
-                    break;
-                case Models.Enums.StorageType.MongoDB:
-                    persister = new MongoDataService();
-                    break;
-                default:
-                    persister = new FileDataService();
-                    break;
-            }
-            Core.Prerender prerender = new Core.Prerender(persister);
+            IDataService dataService = GetDataService(jobData.StorageType);
+            Core.Prerender prerender = new Core.Prerender(dataService);
             prerender.ProcessSite(jobData.Key, jobData.sitemapUrl);
         }
 
         public string Get()
         { 
             return "Executed Get";
+        }
+
+        private IDataService GetDataService(Models.Enums.StorageType storageType)
+        {
+            IDataService dataService;
+            switch (storageType)
+            {
+                case Models.Enums.StorageType.File:
+                    dataService = new FileDataService();
+                    break;
+                case Models.Enums.StorageType.MongoDB:
+                    dataService = new MongoDataService();
+                    break;
+                default:
+                    dataService = new FileDataService();
+                    break;
+            }
+            return dataService;
         }
     }
 }

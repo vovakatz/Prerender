@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Service", "Huge.Prerender.Service\Huge.Prerender.Service.csproj", "{F9540A8D-7EA1-4F65-9CAE-1650BD0D2603}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Web", "Huge.Prerender.Web\Huge.Prerender.Web.csproj", "{9D41BF0C-7A3E-4DAD-88AA-0A32E9A34C4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.WebAdmin", "Huge.Prerender.Web\Huge.Prerender.WebAdmin.csproj", "{9D41BF0C-7A3E-4DAD-88AA-0A32E9A34C4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Models", "Huge.Prerender.Models\Huge.Prerender.Models.csproj", "{D1CF8B90-7FFA-465E-91AA-F0E01A740090}"
 EndProject
@@ -14,6 +14,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Core", "Huge.Prerender.Business\Huge.Prerender.Core.csproj", "{87EDC5D4-80AD-47EA-A402-9B75B7D988A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huge.Prerender.Scheduler", "Huge.Prerender.Scheduler\Huge.Prerender.Scheduler.csproj", "{4D816D5E-7CF3-4254-A25C-116AD78FDA78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AA3200E6-36FA-4F13-BF15-02F4B303D6F5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
