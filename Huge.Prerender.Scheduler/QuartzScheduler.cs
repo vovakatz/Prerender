@@ -38,7 +38,7 @@ namespace Huge.Prerender.Scheduler
                         NameValueCollection properties = new NameValueCollection();
                         properties["quartz.scheduler.instanceName"] = "PrerenderScheduler"; // needed if you plan to use the same database for many schedulers
                         properties["quartz.jobStore.type"] = "Quartz.Simpl.RAMJobStore";
-                        properties["quartz.threadPool.threadCount"] = "3";
+                        properties["quartz.threadPool.threadCount"] = "1";
  
                         scheduler = new Quartz.Impl.StdSchedulerFactory(properties).GetScheduler();
                     }

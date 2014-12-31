@@ -6,11 +6,18 @@ namespace Huge.Prerender.Service.Controllers
 {
     public class PrerenderController : ApiController
     {
-        public void Post([FromBody]JobData jobData)
+        [HttpPost]
+        public void Start([FromBody]JobData jobData)
         {
             IDataService dataService = GetDataService(jobData.StorageType);
             Core.Prerender prerender = new Core.Prerender(dataService);
             prerender.ProcessSite(jobData.Key, jobData.sitemapUrl);
+        }
+
+        [HttpPost]
+        public void Stop()
+        {
+            Core.Prerender.Stop = true;
         }
 
         public string Get()

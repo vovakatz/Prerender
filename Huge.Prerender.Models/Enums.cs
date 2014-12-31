@@ -8,5 +8,16 @@ namespace Huge.Prerender.Models
             File,
             MongoDB
         }
+
+        public enum SitemapChangeFreq
+        { 
+            Always,
+            Hourly,
+            Daily,
+            Weekly,
+            Monthly,
+            Yearly,
+            Never
+        }
     }
 }

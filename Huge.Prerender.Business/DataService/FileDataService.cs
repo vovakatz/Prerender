@@ -25,7 +25,7 @@ namespace Huge.Prerender.Core.DataService
                 .Replace('<', '_')
                 .Replace('>', '_')
                 .Replace('|', '_');
-            return fileName + ".txt";
+            return fileName + ".html";
         }
     }
 }

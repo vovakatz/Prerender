@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Huge.Prerender.Models;
+using System;
+using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace Huge.Prerender.Core
@@ -12,22 +14,35 @@ namespace Huge.Prerender.Core
             _sitemapUrl = sitemapUrl;
         }
 
-        public string [] GetPageUrls()
+        public List<SitemapUrl> GetPageUrls()
         {
-            List<string> result = new List<string>();
+            List<SitemapUrl> result = new List<SitemapUrl>();
 
             XElement sitemap = XElement.Load(_sitemapUrl);
 
             XName url = XName.Get("url", "http://www.sitemaps.org/schemas/sitemap/0.9");
             XName loc = XName.Get("loc", "http://www.sitemaps.org/schemas/sitemap/0.9");
+            XName wait = XName.Get("wait", "http://www.mysite.com/data/blog/1.0");
+            XName waitfor = XName.Get("waitfor", "http://www.mysite.com/data/blog/1.0");
 
             foreach (var urlElement in sitemap.Elements(url))
             {
                 var locElement = urlElement.Element(loc);
-                result.Add(locElement.Value);
+                var waitElement = urlElement.Element(wait);
+                var waitForElement = urlElement.Element(waitfor);
+
+                SitemapUrl sitemapUrl = new SitemapUrl();
+                if (locElement != null)
+                    sitemapUrl.Loc = locElement.Value;
+                if (waitElement != null)
+                    sitemapUrl.WaitTime = Convert.ToInt32(waitElement.Value);
+                if (waitForElement != null)
+                    sitemapUrl.WaitForElementId = waitForElement.Value;
+
+                result.Add(sitemapUrl);
             }
 
-            return result.ToArray();
+            return result;
         }
     }
 }

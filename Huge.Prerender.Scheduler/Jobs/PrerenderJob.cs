@@ -12,7 +12,7 @@ namespace Huge.Prerender.Scheduler.Jobs
         {
             //call end point
             var client = new RestClient("http://localhost/Huge.Prerender.Service/api");
-            var request = new RestRequest("Prerender", Method.POST);
+            var request = new RestRequest("Prerender/Start", Method.POST);
             request.RequestFormat = DataFormat.Json;
             JobData jobData = context.MergedJobDataMap["info"] as JobData;
             //System.Diagnostics.Debugger.Launch();
@@ -23,7 +23,6 @@ namespace Huge.Prerender.Scheduler.Jobs
                 //log the completion of the task
                 //Console.WriteLine(response.Content);
             });
-
 
             string path = @"c:\temp\" + DateTime.Now.Ticks + ".txt";
             using (StreamWriter sw = File.CreateText(path))

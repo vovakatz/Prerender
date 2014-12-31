@@ -1,4 +1,5 @@
 ﻿using Huge.Prerender.Models.Scheduler;
+using RestSharp;
 using System.Configuration;
 using System.ServiceProcess;
 
@@ -33,8 +34,14 @@ namespace Huge.Prerender.Scheduler
 
         protected override void OnStop()
         {
+            //stop scheduler
             var scheduler = QuartzScheduler.Instance;
             scheduler.Shutdown();
+
+            //stop renderer
+            var client = new RestClient("http://localhost/Huge.Prerender.Service/api");
+            var request = new RestRequest("Prerender/Stop", Method.POST);
+            client.Execute(request);
         }
     }
 }

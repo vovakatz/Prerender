@@ -15,6 +15,7 @@ namespace Huge.Prerender.Scheduler
             ITrigger trigger = TriggerBuilder.Create().WithCronSchedule(config.CronExpression).Build();
 
             var scheduler = QuartzScheduler.Instance;
+
             scheduler.ScheduleJob(job, trigger);
             scheduler.Start();
         }
