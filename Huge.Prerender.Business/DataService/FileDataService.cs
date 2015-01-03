@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Huge.Prerender.Core.Utilities;
+using System.IO;
 
 namespace Huge.Prerender.Core.DataService
 {
@@ -11,21 +12,8 @@ namespace Huge.Prerender.Core.DataService
             string directoryPath = baseFolder + websiteKey;
             if (!Directory.Exists(directoryPath))
                 Directory.CreateDirectory(directoryPath);
-            File.WriteAllText(baseFolder + websiteKey + "\\" + GetFileName(url), content);
-        }
-
-        private string GetFileName(string url)
-        {
-            string fileName = url.Replace('\\', '_')
-                .Replace('/', '_')
-                .Replace(':', '_')
-                .Replace('*', '_')
-                .Replace('?', '_')
-                .Replace('"', '_')
-                .Replace('<', '_')
-                .Replace('>', '_')
-                .Replace('|', '_');
-            return fileName + ".html";
+            Common common = new Common();
+            File.WriteAllText(baseFolder + websiteKey + "\\" + common.GetFileName(url) + ".html", content);
         }
     }
 }

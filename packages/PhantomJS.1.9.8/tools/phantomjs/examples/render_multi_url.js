@@ -30,7 +30,7 @@ RenderUrlsToFile = function(urls, callbackPerUrl, callbackFinal) {
             urlIndex++;
             page = webpage.create();
             page.viewportSize = {
-                width: 800,
+                width: 1200,
                 height: 600
             };
             page.settings.userAgent = "Phantom.js bot";
@@ -41,7 +41,7 @@ RenderUrlsToFile = function(urls, callbackPerUrl, callbackFinal) {
                     return window.setTimeout((function() {
                         page.render(file);
                         return next(status, url, file);
-                    }), 200);
+                    }), 2000);
                 } else {
                     return next(status, url, file);
                 }
@@ -59,7 +59,7 @@ if (system.args.length > 1) {
     arrayOfUrls = Array.prototype.slice.call(system.args, 1);
 } else {
     console.log("Usage: phantomjs render_multi_url.js [domain.name1, domain.name2, ...]");
-    arrayOfUrls = ["www.google.com", "www.bbc.co.uk", "www.phantomjs.org"];
+    arrayOfUrls = ["www.townandcountrytoyota.com", "www.townandcountrytoyota.com/find-vehicle#?sortby=highestprice&inventorytype=new&startpage=1", "www.townandcountrytoyota.com/find-vehicle#?sortby=highestprice&inventorytype=new&makes=toyota&startpage=1","www.townandcountrytoyota.com/regional-inventory", "www.townandcountrytoyota.com/find-vehicle#?startpage=1&inventorytype=new&sortby=highestprice&makes=scion", "www.townandcountrytoyota.com/specials/manufacturer-specials","www.townandcountrytoyota.com/models-and-incentives", "www.townandcountrytoyota.com/warranty/toyotacare", "www.townandcountrytoyota.com/warranty/lifetime-warranty","www.townandcountrytoyota.com/finance?section=sellwizard", "www.townandcountrytoyota.com/find-vehicle#?sortby=highestprice&inventorytype=cpo&startpage=1", "www.townandcountrytoyota.com/find-vehicle#?sortby=highestprice&inventorytype=cpo&startpage=1","www.townandcountrytoyota.com/certification-program", "www.townandcountrytoyota.com/finance?section=sellwizard", "www.townandcountrytoyota.com/carfinder","www.townandcountrytoyota.com/find-vehicle#?sortby=highestprice&inventorytype=used&startpage=1"];
 }
 
 RenderUrlsToFile(arrayOfUrls, (function(status, url, file) {

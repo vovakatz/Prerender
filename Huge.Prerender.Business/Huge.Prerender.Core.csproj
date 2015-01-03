@@ -55,6 +55,7 @@
     <Compile Include="Prerender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SitemapParser.cs" />
+    <Compile Include="Utilities\Common.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\PhantomJS.1.9.8\tools\phantomjs\phantomjs.exe">
