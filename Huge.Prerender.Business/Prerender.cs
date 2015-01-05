@@ -22,12 +22,33 @@ namespace Huge.Prerender.Core
             Stop = false;
         }
 
+        public void ProcessSite(string websiteKey, string sitemapUrl)
+        {
+            SitemapParser sitemapParser = new SitemapParser(sitemapUrl);
+            List<SitemapUrl> pageUrls = sitemapParser.GetPageUrls();
+            CreateStaticContent(websiteKey, pageUrls);
+        }
+
+        public string CreateStaticContent(string websiteKey, string url)
+        {
+            using (var driver = new PhantomJSDriver())
+            {
+                SetupBrowserWindow(driver);
+                string content;
+                driver.Navigate().GoToUrl(url);
+                content = driver.PageSource;
+                _dataService.Save(websiteKey, url, content);
+                Common common = new Common();
+                driver.GetScreenshot().SaveAsFile("c:\\Temp\\" + websiteKey + "\\" + common.GetFileName(url) + ".png", System.Drawing.Imaging.ImageFormat.Png);
+                return content;
+            }
+        }
+
         public void CreateStaticContent(string websiteKey, List<SitemapUrl> urls)
         {
             using (var driver = new PhantomJSDriver())
             {
-                driver.Manage().Window.Position = new Point(0, 0);
-                driver.Manage().Window.Size = new Size(1200, 768);
+                SetupBrowserWindow(driver);
                 foreach (SitemapUrl url in urls)
                 {
                     if (Stop) break;
@@ -49,11 +70,18 @@ namespace Huge.Prerender.Core
             }
         }
 
-        public void ProcessSite(string websiteKey, string sitemapUrl)
+        public string GetStaticContent(string websiteKey, string url)
         {
-            SitemapParser sitemapParser = new SitemapParser(sitemapUrl);
-            List<SitemapUrl> pageUrls = sitemapParser.GetPageUrls();
-            CreateStaticContent(websiteKey, pageUrls);
+            string content = _dataService.GetContent(websiteKey, url);
+            if (content == null)
+                content = CreateStaticContent(websiteKey, url);
+            return content;
+        }
+
+        private void SetupBrowserWindow(PhantomJSDriver driver)
+        {
+            driver.Manage().Window.Position = new Point(0, 0);
+            driver.Manage().Window.Size = new Size(1200, 768);
         }
     }
 

@@ -15,5 +15,14 @@ namespace Huge.Prerender.Core.DataService
             Common common = new Common();
             File.WriteAllText(baseFolder + websiteKey + "\\" + common.GetFileName(url) + ".html", content);
         }
+
+        public string GetContent(string websiteKey, string url)
+        {
+            Common common = new Common();
+            string filePath = baseFolder + websiteKey + "\\" + common.GetFileName(url) + ".html";
+            if (File.Exists(filePath))
+                return File.ReadAllText(filePath);
+            return null;
+        }
     }
 }

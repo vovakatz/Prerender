@@ -8,5 +8,10 @@ namespace Huge.Prerender.Core.DataService
         {
             throw new NotImplementedException();
         }
+
+        public string GetContent(string websiteKey, string url)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
