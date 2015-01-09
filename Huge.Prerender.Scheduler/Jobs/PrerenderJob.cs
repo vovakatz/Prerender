@@ -10,11 +10,12 @@ namespace Huge.Prerender.Scheduler.Jobs
     {
         public void Execute(IJobExecutionContext context)
         {
+            JobData jobData = context.MergedJobDataMap["info"] as JobData;
             //call end point
-            var client = new RestClient("http://localhost/Huge.Prerender.Service/api");
+            var client = new RestClient(jobData.ServiceEndPointUrl);
             var request = new RestRequest("Prerender/Start", Method.POST);
             request.RequestFormat = DataFormat.Json;
-            JobData jobData = context.MergedJobDataMap["info"] as JobData;
+            
             //System.Diagnostics.Debugger.Launch();
             request.AddBody(jobData);
 

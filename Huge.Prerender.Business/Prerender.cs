@@ -7,6 +7,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 
 namespace Huge.Prerender.Core
 {
@@ -62,6 +63,19 @@ namespace Huge.Prerender.Core
                         }
                         catch { }
                     }
+                    else
+                    {
+                        int count = 0;
+                        while (true) // Handle timeout somewhere
+                        {
+                            var ajaxIsComplete = (bool)(driver as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");
+                            if (ajaxIsComplete)
+                                break;
+                            Thread.Sleep(100);
+                            count++;
+                        }
+                    }
+
                     content = driver.PageSource;
                     _dataService.Save(websiteKey, url.Loc, content);
                     Common common = new Common();

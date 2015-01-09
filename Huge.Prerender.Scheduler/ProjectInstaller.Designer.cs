@@ -41,7 +41,6 @@
             // 
             this.serviceInstaller1.Description = "Prerender POC";
             this.serviceInstaller1.ServiceName = "Huge.Prerender.Scheduler";
-            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 

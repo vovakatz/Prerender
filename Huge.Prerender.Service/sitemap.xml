@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:ajax="http://www.mysite.com/data/blog/1.0">
   <url>
+    <loc>http://www.sony.com/</loc>
+    <lastmod>2014-12-12T02:05:25-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.townandcountrytoyota.com</loc>
     <lastmod>2014-12-12T02:05:25-05:00</lastmod>
   </url>
@@ -9,5 +13,9 @@
     <lastmod>2014-12-12T02:05:25-05:00</lastmod>
     <ajax:wait>10</ajax:wait>
     <ajax:waitfor>divAjaxDataLoaded</ajax:waitfor>
+  </url>
+  <url>
+    <loc>http://www.gilt.com/sale/men?globalnav_referrer=men</loc>
+    <lastmod>2014-12-12T02:05:25-05:00</lastmod>
   </url>
 </urlset>

@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataService\DataServiceFactory.cs" />
     <Compile Include="DataService\FileDataService.cs" />
     <Compile Include="DataService\IDataService.cs" />
     <Compile Include="DataService\MongoDataService.cs" />

@@ -2,3 +2,4 @@ C:\Playground\Huge.Prerender\Huge.Prerender.Models\bin\Debug\Huge.Prerender.Mode
 C:\Playground\Huge.Prerender\Huge.Prerender.Models\bin\Debug\Huge.Prerender.Models.pdb
 C:\Playground\Huge.Prerender\Huge.Prerender.Models\obj\Debug\Huge.Prerender.Models.dll
 C:\Playground\Huge.Prerender\Huge.Prerender.Models\obj\Debug\Huge.Prerender.Models.pdb
+C:\Playground\Huge.Prerender\Huge.Prerender.Models\obj\Debug\Huge.Prerender.Models.csprojResolveAssemblyReference.cache
